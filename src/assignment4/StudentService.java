@@ -1,47 +1,124 @@
 package assignment4;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 
 public class StudentService {
-	String[] students= new String[100];
+	Student[] students= new Student[100];
 	int i=0;
 	
-	public void readList() throws IOException  {
-	BufferedReader reader=null;
-	try {
-		//opening the file
-		 reader= new BufferedReader(new FileReader("student-master-list.csv"));
-		 
-		 String lines= "";
-		 while ((lines=reader.readLine() )!=null) {
-			 System.out.println(lines);
-			String[] studentList = lines.split(",");
-			System.out.println(Arrays.toString(studentList)) ;
-			
-			
-			
-			
-			
-		 
-			
-		 }
-Student student= new Student();
-		 
+	public void readList() throws IOException {
+		BufferedReader reader = null;
+		try {
+			//opening the file
+			reader = new BufferedReader(new FileReader("student-master-list.csv"));
+			reader.readLine();
+			String lines = "";
+			while ((lines = reader.readLine()) != null) {
+				System.out.println(lines);
+				String[] studentList = lines.split(",");
+				System.out.println(Arrays.toString(studentList));
+
+				Integer myIntVal = Integer.parseInt(studentList[0]);
+				Integer anotherIntVal = Integer.parseInt(studentList[3]);
+				System.out.println(myIntVal);
+				System.out.println(anotherIntVal);
+
+				Student student = new Student(studentList[1], myIntVal, anotherIntVal, studentList[2]);
+
+				students[i] = student;
+				i++;
+
+				System.out.println(Arrays.toString(students));
+
+			}
 
 
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	finally {
-        assert reader != null;
-        reader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			assert reader != null;
+			reader.close();
+		}
+
+
+		// sort using comparators for the strings that represent the
 	}
 
+	public void sortArrays(Student[] students){
+CourseSorting courseSorting = new CourseSorting();
+Arrays.sort(students, courseSorting);
+System.out.println(Arrays.toString(students));
+System.out.println("sorted by course");
+
 	}
+
+
+	public void findElement(Student[] students){
+		String correctValue="APMTH";
+		String anotherCorrectValue="COMPSCI";
+		String lastCorrectValue="STAT";
+		Student foundStudent = null;
+ArrayList arrayList = new ArrayList();
+arrayList.addAll(Arrays.asList(students));
+System.out.println(arrayList);
+		for(Student student : students){
+
+			if(student.getCourseName().startsWith(correctValue)){System.out.println(arrayList.indexOf(student));
+				System.out.println("These are the indexes for APMTH");}
+
+			if (student.getCourseName().startsWith(anotherCorrectValue)){System.out.println(arrayList.indexOf(student));
+				System.out.println("These are the indexes for COMPSCI");}
+
+			if (student.getCourseName().startsWith(lastCorrectValue)){System.out.println(arrayList.indexOf(student));
+				System.out.println("These are the indexes for STAT");}
+
+
+		}
+
+
+
+
+
+
+	}
+	public void copyElements(Student[] students) throws IOException {
+Student [] apStudents= new Student[33];
+
+apStudents= Arrays.copyOfRange(students,0,32);
+System.out.println(Arrays.toString(apStudents));
+Student[] compSciStudents= new Student[33];
+compSciStudents= Arrays.copyOfRange(students,33,66);
+System.out.println(Arrays.toString(compSciStudents));
+
+	Student[] statStudents= new Student[33];
+ statStudents= Arrays.copyOfRange(students,67,99);
+System.out.println(Arrays.toString(statStudents));
+		BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"));
+
+		for(Student student : compSciStudents){
+
+			writer.write(compSciStudents[i]);
+
+
+
+		}
+
+
+	}
+
+
+
+
+
+
+
+
 
 }
