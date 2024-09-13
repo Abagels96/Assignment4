@@ -101,16 +101,29 @@ System.out.println(Arrays.toString(compSciStudents));
  statStudents= Arrays.copyOfRange(students,67,99);
 System.out.println(Arrays.toString(statStudents));
 		BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"));
-
-		for(Student student : compSciStudents){
-
-			writer.write(compSciStudents[i]);
-
-
-
+for(int i=0; i<compSciStudents.length; i++){
+	Student student = compSciStudents[i];
+	writer.write(student.toString());
+	writer.newLine();
+	writer.flush();
 		}
+writer.close();
+BufferedWriter writer2 = new BufferedWriter(new FileWriter("course2.csv"));
 
-
+for(int i=0; i<statStudents.length; i++){
+	Student student = statStudents[i];
+	writer2.write(student.toString());
+	writer2.newLine();
+	writer2.flush();
+}
+writer2.close();
+BufferedWriter writer3 = new BufferedWriter(new FileWriter("course3.csv"));
+for(int i=0; i<apStudents.length; i++){
+	Student student = apStudents[i];
+	writer3.write(student.toString());
+	writer3.newLine();
+	writer3.flush();
+}
 	}
 
 
