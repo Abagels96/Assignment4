@@ -1,17 +1,13 @@
 package assignment4;
 
 import java.io.*;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 
 public class StudentService {
 	Student[] students= new Student[100];
 	int i=0;
-	
+	CourseSorting courseSorting = new CourseSorting();
 	public void readList() throws IOException {
 		BufferedReader reader = null;
 		try {
@@ -29,7 +25,7 @@ public class StudentService {
 				System.out.println(myIntVal);
 				System.out.println(anotherIntVal);
 
-				Student student = new Student(studentList[1], myIntVal, anotherIntVal, studentList[2]);
+				Student student = new Student(myIntVal, studentList[1], anotherIntVal, studentList[2]);
 
 				students[i] = student;
 				i++;
@@ -52,7 +48,7 @@ public class StudentService {
 	}
 
 	public void sortArrays(Student[] students){
-CourseSorting courseSorting = new CourseSorting();
+
 Arrays.sort(students, courseSorting);
 System.out.println(Arrays.toString(students));
 System.out.println("sorted by course");
@@ -92,7 +88,10 @@ System.out.println(arrayList);
 Student [] apStudents= new Student[33];
 
 apStudents= Arrays.copyOfRange(students,0,32);
+
+Arrays.sort(apStudents, courseSorting);
 System.out.println(Arrays.toString(apStudents));
+
 Student[] compSciStudents= new Student[33];
 compSciStudents= Arrays.copyOfRange(students,33,66);
 System.out.println(Arrays.toString(compSciStudents));
@@ -120,12 +119,20 @@ writer2.close();
 BufferedWriter writer3 = new BufferedWriter(new FileWriter("course3.csv"));
 for(int i=0; i<apStudents.length; i++){
 	Student student = apStudents[i];
+
+
+
+
 	writer3.write(student.toString());
 	writer3.newLine();
 	writer3.flush();
 }
-	}
 
+writer3.close();
+
+
+
+	}
 
 
 

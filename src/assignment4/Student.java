@@ -1,21 +1,23 @@
 package assignment4;
 
-public class  Student  {
+public class  Student {
 
 	@Override
 	public String toString() {
-		return "Student{" +
+		return "Student{ StudentId=" + StudentId +
+				"," +
 				"name='" + name + '\'' +
-				", StudentId=" + StudentId +
+
 				", studentGrade=" + studentGrade +
 				", courseName='" + courseName + '\'' +
 				'}';
 	}
 
-	public Student(String name, int studentId, int studentGrade, String courseName) {
+	public Student(int studentId,String name, int studentGrade, String courseName) {
 		super();
-		this.name = name;
 		this.StudentId = studentId;
+		this.name = name;
+
 		this.studentGrade = studentGrade;
 		this.courseName = courseName;
 	}
@@ -59,7 +61,7 @@ public class  Student  {
 
 
 
-	}
+}
 
 
 

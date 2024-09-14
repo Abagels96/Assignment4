@@ -18,7 +18,7 @@ service.copyElements(service.students);
 ///Read file done
 /// convert data into an string array done 
 /// isolate the course name by using the POJO done
-/// make an object out of each group of students working on.
-/// write each object into a file
+/// make an object out of each group of students working on. done
+/// write each object into a file done
 //// sort each file by grade in descending order
 //// deal with null values 
