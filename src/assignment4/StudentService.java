@@ -89,15 +89,47 @@ Student [] apStudents= new Student[33];
 
 apStudents= Arrays.copyOfRange(students,0,32);
 
-Arrays.sort(apStudents, courseSorting);
+
+for (Student student :apStudents) {
+
+Arrays.sort(apStudents,new Comparator<Student>() {
+	@Override
+	public int compare(Student a, Student b) {
+		if(b.getStudentGrade()==a.getStudentGrade()){return 0;}
+		else if(b.getStudentGrade()>a.getStudentGrade()){return 1;}
+        return -1;
+    }
+});
+
+}
 System.out.println(Arrays.toString(apStudents));
 
 Student[] compSciStudents= new Student[33];
 compSciStudents= Arrays.copyOfRange(students,33,66);
+for (Student student :compSciStudents) {
+	Arrays.sort(compSciStudents,new Comparator<Student>() {
+		@Override
+		public int compare(Student a, Student b) {
+			if(b.getStudentGrade()==a.getStudentGrade()){return 0;}
+			else if(b.getStudentGrade()>a.getStudentGrade()){return 1;}
+			return -1;
+		}
+	});
+}
 System.out.println(Arrays.toString(compSciStudents));
 
 	Student[] statStudents= new Student[33];
  statStudents= Arrays.copyOfRange(students,67,99);
+ for(Student student :statStudents){
+	 Arrays.sort(statStudents,new Comparator<Student>() {
+		 @Override
+		 public int compare(Student a, Student b) {
+			 if(b.getStudentGrade()==a.getStudentGrade()){return 0;}
+			 else if(b.getStudentGrade()>a.getStudentGrade()){return 1;}
+			 return -1;
+		 }
+	 });
+ }
 System.out.println(Arrays.toString(statStudents));
 		BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"));
 for(int i=0; i<compSciStudents.length; i++){

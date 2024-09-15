@@ -15,27 +15,13 @@ public class CourseSorting implements Comparator<Student> {
         if (b.getCourseName().compareTo(a.getCourseName()) != 0) {
 
             return a.getCourseName().compareTo(b.getCourseName());
-        } else if (a.getCourseName().equals(b.getCourseName()) && a.getCourseName().matches("\\w\\w\\w\\w\\w\\s\\d\\d\\d")) {
-
-
-        if( b.getStudentGrade()> a.getStudentGrade()){
-            return 1;
-        }
-        else if (b.getStudentGrade()< a.getStudentGrade()){
-        return -1;}
-        return 0;
         }
 
-
-            return Integer.compare(a.getStudentGrade(), b.getStudentGrade());
-        }
-
-
+return b.getCourseName().compareTo(a.getCourseName());
     }
 
 
 
 
-
-
+}
 
