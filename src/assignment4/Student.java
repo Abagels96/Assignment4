@@ -4,22 +4,16 @@ public class  Student {
 
 	@Override
 	public String toString() {
-		return "Student{ StudentId=" + StudentId +
-				"," +
-				"name='" + name + '\'' +
-
-				", studentGrade=" + studentGrade +
-				", courseName='" + courseName + '\'' +
-				'}';
+		return   StudentId+ ","+ name +"," + courseName+","+ studentGrade ;
 	}
 
-	public Student(int studentId,String name, int studentGrade, String courseName) {
+	public Student(int studentId,String name, String courseName,int studentGrade) {
 		super();
 		this.StudentId = studentId;
 		this.name = name;
-
-		this.studentGrade = studentGrade;
 		this.courseName = courseName;
+		this.studentGrade = studentGrade;
+
 	}
 
 	private String name;

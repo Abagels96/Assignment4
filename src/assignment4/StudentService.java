@@ -25,7 +25,7 @@ public class StudentService {
 				System.out.println(myIntVal);
 				System.out.println(anotherIntVal);
 
-				Student student = new Student(myIntVal, studentList[1], anotherIntVal, studentList[2]);
+				Student student = new Student(myIntVal, studentList[1], studentList[2],anotherIntVal );
 
 				students[i] = student;
 				i++;
@@ -119,7 +119,9 @@ for (Student student :compSciStudents) {
 System.out.println(Arrays.toString(compSciStudents));
 
 	Student[] statStudents= new Student[33];
+
  statStudents= Arrays.copyOfRange(students,67,99);
+
  for(Student student :statStudents){
 	 Arrays.sort(statStudents,new Comparator<Student>() {
 		 @Override
@@ -132,6 +134,9 @@ System.out.println(Arrays.toString(compSciStudents));
  }
 System.out.println(Arrays.toString(statStudents));
 		BufferedWriter writer = new BufferedWriter(new FileWriter("course1.csv"));
+		writer.write("Student Id, Student Name,Course Name,Grade ");
+		writer.newLine();
+		writer.flush();
 for(int i=0; i<compSciStudents.length; i++){
 	Student student = compSciStudents[i];
 	writer.write(student.toString());
@@ -140,7 +145,9 @@ for(int i=0; i<compSciStudents.length; i++){
 		}
 writer.close();
 BufferedWriter writer2 = new BufferedWriter(new FileWriter("course2.csv"));
-
+		writer2.write("Student Id, Student Name,Course Name,Grade");
+		writer2.newLine();
+		writer2.flush();
 for(int i=0; i<statStudents.length; i++){
 	Student student = statStudents[i];
 	writer2.write(student.toString());
@@ -149,6 +156,10 @@ for(int i=0; i<statStudents.length; i++){
 }
 writer2.close();
 BufferedWriter writer3 = new BufferedWriter(new FileWriter("course3.csv"));
+
+writer3.write("Student Id, Student Name,Course,Grade");
+		writer3.newLine();
+		writer3.flush();
 for(int i=0; i<apStudents.length; i++){
 	Student student = apStudents[i];
 

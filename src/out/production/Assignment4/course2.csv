@@ -1,32 +1,33 @@
-Student{ StudentId=3,name='Keiran Molloy', studentGrade=74, courseName='STAT 234'}
-Student{ StudentId=6,name='Bodhi Stokes', studentGrade=86, courseName='STAT 234'}
-Student{ StudentId=9,name='Cerys Mill', studentGrade=63, courseName='STAT 235'}
-Student{ StudentId=12,name='Dakota O'Doherty', studentGrade=79, courseName='STAT 235'}
-Student{ StudentId=15,name='Padraig Barry', studentGrade=93, courseName='STAT 236'}
-Student{ StudentId=18,name='Lily-Anne Parsons', studentGrade=81, courseName='STAT 236'}
-Student{ StudentId=24,name='Melina Bouvet', studentGrade=72, courseName='STAT 237'}
-Student{ StudentId=21,name='Max Reeves', studentGrade=84, courseName='STAT 237'}
-Student{ StudentId=27,name='Giorgio Burgess', studentGrade=65, courseName='STAT 238'}
-Student{ StudentId=30,name='Najma Kline', studentGrade=81, courseName='STAT 238'}
-Student{ StudentId=33,name='Stewart Reed', studentGrade=90, courseName='STAT 239'}
-Student{ StudentId=36,name='Nabiha Villa', studentGrade=74, courseName='STAT 239'}
-Student{ StudentId=42,name='Malia Avalos', studentGrade=83, courseName='STAT 240'}
-Student{ StudentId=39,name='Zachariah Hutchinson', studentGrade=92, courseName='STAT 240'}
-Student{ StudentId=45,name='Harriette Albert', studentGrade=58, courseName='STAT 241'}
-Student{ StudentId=48,name='Saima Day', studentGrade=84, courseName='STAT 241'}
-Student{ StudentId=54,name='Franciszek Hartman', studentGrade=90, courseName='STAT 242'}
-Student{ StudentId=51,name='Faye Sharp', studentGrade=66, courseName='STAT 242'}
-Student{ StudentId=60,name='Sasha Prentice', studentGrade=84, courseName='STAT 243'}
-Student{ StudentId=57,name='Tasmin O'Connor', studentGrade=83, courseName='STAT 243'}
-Student{ StudentId=63,name='Corey Mckee', studentGrade=67, courseName='STAT 244'}
-Student{ StudentId=66,name='Marley Galloway', studentGrade=66, courseName='STAT 244'}
-Student{ StudentId=72,name='Hiba Cowan', studentGrade=69, courseName='STAT 245'}
-Student{ StudentId=69,name='Micah Akhtar', studentGrade=60, courseName='STAT 245'}
-Student{ StudentId=75,name='Onur Shelton', studentGrade=73, courseName='STAT 246'}
-Student{ StudentId=78,name='Tanisha Gillespie', studentGrade=71, courseName='STAT 246'}
-Student{ StudentId=81,name='Ezekiel Pike', studentGrade=67, courseName='STAT 247'}
-Student{ StudentId=84,name='Clay Ritter', studentGrade=58, courseName='STAT 247'}
-Student{ StudentId=90,name='Isaak Guzman', studentGrade=63, courseName='STAT 248'}
-Student{ StudentId=87,name='Amelia-Mae Meyer', studentGrade=71, courseName='STAT 248'}
-Student{ StudentId=96,name='Amelia Mccullough', studentGrade=56, courseName='STAT 249'}
-Student{ StudentId=93,name='Finbar Pearce', studentGrade=71, courseName='STAT 249'}
+Student Id, Student Name,Grade, Course Name
+15,Padraig Barry,93,STAT 236
+39,Zachariah Hutchinson,92,STAT 240
+33,Stewart Reed,90,STAT 239
+54,Franciszek Hartman,90,STAT 242
+6,Bodhi Stokes,86,STAT 234
+21,Max Reeves,84,STAT 237
+48,Saima Day,84,STAT 241
+60,Sasha Prentice,84,STAT 243
+42,Malia Avalos,83,STAT 240
+57,Tasmin O'Connor,83,STAT 243
+18,Lily-Anne Parsons,81,STAT 236
+30,Najma Kline,81,STAT 238
+12,Dakota O'Doherty,79,STAT 235
+3,Keiran Molloy,74,STAT 234
+36,Nabiha Villa,74,STAT 239
+75,Onur Shelton,73,STAT 246
+24,Melina Bouvet,72,STAT 237
+78,Tanisha Gillespie,71,STAT 246
+87,Amelia-Mae Meyer,71,STAT 248
+93,Finbar Pearce,71,STAT 249
+72,Hiba Cowan,69,STAT 245
+63,Corey Mckee,67,STAT 244
+81,Ezekiel Pike,67,STAT 247
+51,Faye Sharp,66,STAT 242
+66,Marley Galloway,66,STAT 244
+27,Giorgio Burgess,65,STAT 238
+9,Cerys Mill,63,STAT 235
+90,Isaak Guzman,63,STAT 248
+69,Micah Akhtar,60,STAT 245
+45,Harriette Albert,58,STAT 241
+84,Clay Ritter,58,STAT 247
+96,Amelia Mccullough,56,STAT 249
